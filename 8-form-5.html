@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>여름방학 특강 신청</h1>
+    <form action="#" method="POST">
+      <fieldset>
+        <legend>수강과목</legend>
+        <label for="time">영어회화(초급)</label>
+        <input type="text" id="time" value="오전 9:00 ~ 11:00" readonly />
+        <!--readonly 오직 값을 고정시킬때-->
+      </fieldset>
+      <fieldset>
+        <legend>신청자</legend>
+        <label for="name">이름</label>
+        <input type="text" id="name" autofocus required /><br />
+        <!--autofocus 홈페이지를 접속했을때 이름에 커서가게하기-->
+        <label for="text-number">학번</label>
+        <input
+          type="text"
+          id="text-number"
+          placeholder="7자로 작성하시오"
+          maxlength="7"
+          required
+        />
+        <br />
+        <label for="select">학과</label>
+        <select id="select">
+          <option value="건축공학과">건축공학과</option>
+          <option value="기계공학과">기계공학과</option>
+          <option value="산업공학과">산업공학과</option>
+          <option value="전기전자공학과">전기전자공학과</option>
+          <option value="컴퓨터공학과" selected>컴퓨터공학과</option>
+          <!--selected 값이 먼저 선택되어 보이게 하고싶을 때 사용-->
+          <option value="화학공학과">화학공학과</option>
+        </select>
+        <br />
+        <label for="phone">연락처</label>
+        <select id="phone">
+          <option value="010" selected>010</option>
+          <option value="011">011</option>
+          <option value="019">019</option>
+          <option value="016">016</option>
+          <option value="018">018</option>
+        </select>
+        -
+        <input type="tel" maxlength="4" required />
+        -
+        <input type="tel" maxlength="4" required />
+        <!-- <input type="tel" id="phone" maxlength="11" required> -->
+      </fieldset>
+
+      <fieldset>
+        <legend>교재 주문</legend>
+        <label for="book">교재</label>
+        <input type="range" id="book" min="0" max="10" value="0" />
+        <br />
+        <label for="worksheet">워크시트</label>
+        <input type="number" value="1" id="worksheet" />
+        <br />
+        <label for="group">단체주문</label>
+        <input
+          type="number"
+          value="10"
+          id="group"
+          min="0"
+          max="50"
+          step="10"
+          value="0"
+        />
+        <!-- step은 계단씩으로 숫자가 상슴 10 20 30 40 이런씩으로 -->
+        <br />
+        <label for="field">관심분야-문법, 어휘, 회화, 리스닝</label>
+        <input type="text" id="field" list="interest" />
+        <datalist id="interest">
+          <option value="grammar" label="문법"></option>
+          <option value="voca" label="어휘"></option>
+          <option value="speaking" label="회화"></option>
+          <option value="listening" label="리스닝"></option>
+        </datalist>
+      </fieldset>
+      <fieldset>
+        <legend>신청과 재입력</legend>
+        <input type="submit" value="submit"" />
+        <input type="reset" value="reset" />
+      </fieldset>
+    </form>
+  </body>
+</html>

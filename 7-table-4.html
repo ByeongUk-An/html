@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표태그</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        width: 120px;
+        height: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        품질마크 연도별 통계
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col">연도</th>
+          <!-- scope는 해당 줄이랑 관계가 있다는 접근성 scope는 반드시 th에만 사용 -->
+          <th id="apply" scope="col">신청 사이트 수</th>
+          <!--접근성으로 th값에 id값을 정해주고 tbody에 있는 td에게 선택자를 주어 연관있다는것을 알려주기-->
+          <th id="fication" scope="col">인증 사이트 수</th>
+          <th id="pass" scope="col">합격률</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="year2007" scope="row">2007년</th>
+          <td headers="apply year2007">40</td>
+          <td headers="fication year2007">15</td>
+          <td headers="pass year2007">37.5%</td>
+        </tr>
+        <tr>
+          <th id="year2008" scope="row">2008년</th>
+          <td headers="year2008 apply">40</td>
+          <td headers="year2008 fication">15</td>
+          <td headers="year2008 pass">37.5%</td>
+        </tr>
+        <tr>
+          <th id="year2009" scope="row">2009년</th>
+          <td headers="year2009 apply">40</td>
+          <td headers="year2009 fication">15</td>
+          <td headers="year2009 pass">37.5%</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th id="total" scope="row">합계</th>
+          <!-- 마지막 합계 같은 경우는 그에 해당하는 모든 값을 넣어주는것이 좋다. -->
+          <td headers="total apply year2007 year2008 year2009">1489</td>
+          <td headers="total fication year2007 year2008 year2009">448</td>
+          <td headers="total pass year2007 year2008 year2009">30.09%</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>

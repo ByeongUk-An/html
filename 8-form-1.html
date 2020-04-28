@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>폼태그</title>
+  </head>
+  <body>
+    <h1>폼요소에 대해 알아봅니다</h1>
+    <form action="#" method="POST">
+      <input
+        required
+        type="text"
+        maxlength="5"
+        name="myName"
+        value="홍길동"
+        placeholder="이름을 적어주세요"
+      />
+
+      <input type="password" name="pw" /><br />
+      <input type="button" value="확인" />
+      <input type="submit" value="전송" />
+      <input type="reset" value="초기화" />
+      <button>버튼</button><br />
+      <input type="image" src="/images/login.jpg" alt="로그인하기" /><br />
+
+      <input
+        type="checkbox"
+        value="bawling"
+        name="hobby"
+        id="bawling1"
+        checked
+      />
+      <label for="bawling1">볼링</label>
+
+      <input type="checkbox" value="tennis" name="hobby" id="tennis1" />
+      <label for="tennis1">테니스</label>
+
+      <input type="checkbox" value="movie" name="hobby" id="movie1" />
+      <label for="movie1">영화</label><br />
+
+      <input type="radio" name="agree" value="yes" id="agree1" />
+      <label for="agree1">동의합니다</label><br />
+      <input type="radio" name="agree" value="no" id="agree2" checked />
+      <label for="agree2">동의하지 않습니다</label><br />
+      <textarea
+        placeholder="문의내용을 입력하시오"
+        cols="30"
+        rows="10"
+      ></textarea
+      ><br />
+      <select>
+        <option value="HTML">HTML</option>
+        <option value="CSS">CSS</option>
+        <option value="JavaScript">JavaScript</option>
+        <option value="React" selected>React</option>
+      </select>
+    </form>
+  </body>
+</html>
+<!-- radio , checkbox 타입은 velue를 무조건 다르게 사용 이유는 서버에 보낼때 값을 구분하기 위해 무조건 디폴트값으로 넣어야한다. -->
+<!-- name은 한그룹을 묶기 위해서 사용한다 만약 다르게 사용시 서로 다른 인풋으로 적용이된다. -->

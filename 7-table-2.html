@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표태그</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 30px;
+      }
+
+      caption {
+        color: blue;
+        font-size: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <table>
+        <caption>
+          <!--표제목 적는 태그-->
+          표제목
+        </caption>
+        <thead>
+          <!--표의 제목셀을 그룹화, td가 아닌 th만 올 수 있다.-->
+          <tr>
+            <th>Header1</th>
+            <th>Header2</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Data1</td>
+            <td>Data1</td>
+          </tr>
+          <tr>
+            <td>Data2</td>
+            <td>Data2</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td>Data3</td>
+            <td>Data3</td>
+          </tr>
+        </tfoot>
+      </table>
+    </table>
+  </body>
+</html>

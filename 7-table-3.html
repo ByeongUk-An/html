@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>표태그</title>
+    <style>
+      table {
+        border-collapse: collapse;
+      }
+      th,
+      td {
+        border: 1px solid black;
+        width: 100px;
+        height: 50px;
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <caption>
+        A와 B의 중화요리 가격비교
+      </caption>
+      <thead>
+        <tr>
+          <th></th>
+          <th id="storeA" scope="col">A</th>
+          <th id="storeB" scope="col">B</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th id="menu1" scope="row">짜장면</th>
+          <td headers="storeA menu1">4,000원</td>
+          <!--headers는 접근성 문제로 인하여 사용 4000원은 storeA 와 menu1의 관련된 내용-->
+          <td headers="storeB menu1">5,000원</td>
+        </tr>
+        <tr>
+          <th id="menu2" scope="row">짬뽕</th>
+          <td headers="storeA menu2">4,500원</td>
+          <td headers="storeB menu2">5,500원</td>
+        </tr>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th id="total">합계</th>
+          <td headers="storeA total">8,500원</td>
+          <td headers="storeB menu1 menu2 total">10,500원</td>
+        </tr>
+      </tfoot>
+    </table>
+  </body>
+</html>
